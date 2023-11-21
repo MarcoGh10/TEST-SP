@@ -34,4 +34,8 @@ public class Message {
     public void setHouse(String house) {
         this.house = house;
     }
+
+
+
+
 }

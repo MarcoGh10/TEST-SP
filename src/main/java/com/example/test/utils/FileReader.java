@@ -4,7 +4,6 @@ import com.example.test.Model.Message;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -28,7 +27,10 @@ public class FileReader {
     private void loadMessagesFromFile() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            messages = objectMapper.readValue(new File(FILE_PATH), new TypeReference<List<Message>>() {});
+            List<Message> messages = objectMapper.readValue(
+                    new File("src/main/resources/messages.json"),
+                    new TypeReference<List<Message>>() {}
+            );
         } catch (IOException e) {
             e.printStackTrace();
         }
