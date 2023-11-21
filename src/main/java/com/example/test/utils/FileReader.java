@@ -1,10 +1,13 @@
-package com.example.test;
+package com.example.test.utils;
 
+import com.example.test.Model.Message;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class FileReader {
     private static final String FILE_PATH = "src/main/resources/messages.json";
